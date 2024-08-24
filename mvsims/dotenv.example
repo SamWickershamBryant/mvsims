@@ -1,0 +1,10 @@
+AUTH_USER=
+AUTH_PASS=
+DB_USER_NM = 
+DB_USER_PW = 
+DB_HOST = 
+DB_PORT = 
+DB_NAME = 
+DB_TABLE_NAME = dashboard_usages
+
+SECRET_KEY = 
