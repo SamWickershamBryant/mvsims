@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-x@5udwrr)bt#@phd7tw59y6at2^cm_v9jd%bgm_&08)9%652b@'
+SECRET_KEY = os.getenv('SECRET_KEY', 'example12312323')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -73,11 +74,21 @@ WSGI_APPLICATION = 'mvsims.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
+DB_USER_NM = os.getenv('DB_USER_NM')
+DB_USER_PW = os.getenv('DB_USER_PW')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
+DB_NAME = os.getenv('DB_NAME')
+
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': DB_NAME,
+        'USER': DB_USER_NM,
+        'PASSWORD': DB_USER_PW,
+        'HOST':DB_HOST,
+        'PORT':DB_PORT,
     }
 }
 
