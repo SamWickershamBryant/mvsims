@@ -1,5 +1,4 @@
 # MV Sims #
-Authors: Abigail Barrientos, Sam Bryant, Ethan Wintill, Laiba Janat, Selah Boyle
 
 ## Overview
 A simple tool used for view historical data of SIM data usage for MyVends customers. Allows filtering by time and ICCID. Uses chart.js for visual display. Docker compose is leveredged with 3 containers. One runs the backend for the webpage, another container runs the database, additionally a third container is used to run an API script that fetches data usage information from the Monogato API on an hourly basis.
