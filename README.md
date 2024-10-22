@@ -17,9 +17,14 @@ A simple tool used for view historical data of SIM data usage for MyVends custom
 
 
 ## Setup
-1. `cd mvsims`
-2. `docker compose up --build -d`
-3. visit http://localhost:8000/
+You will need API keys to access Monogato IoT Management Platform.
+1. Replace `dotenv.example` with `.env` and input sensitive information
+2. `cd mvsims`
+3. `docker compose up --build -d`
+4. visit http://localhost:8000/
+
+
+
 
 
 
